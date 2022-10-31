@@ -4,7 +4,7 @@ import sys, time
 argv = sys.argv
 host = argv[1]
 port = argv[2]
-timeout = 3.5
+timeout = 5
 
 clientSocket = socket(AF_INET, SOCK_DGRAM)
 clientSocket.settimeout(timeout)

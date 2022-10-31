@@ -19,11 +19,11 @@ while True:
         data_iter = 0
         with open(filename, 'rb') as f:
             try:
-                outputdata = f.read(1024)
+                outputdata = f.read(2048)
                 while outputdata:
                     clientSocket.send(outputdata)
                     data_iter = data_iter + 1
-                    outputdata = f.read(1024)
+                    outputdata = f.read(2048)
                     print("파일 %s (seq: %d) is sent" %(filename, data_iter))
                     time.sleep(5)
             except Exception as ex:
